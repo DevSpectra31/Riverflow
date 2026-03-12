@@ -14,7 +14,7 @@ export default async function createCommentCollection(){
     console.log("comment collection created");
 
     //created attributes
-    Promise.all([
+    await Promise.all([
         databases.createStringAttribute(db,commentCollection,"content",1000,true),
         databases.createEnumAttribute(db,commentCollection,"type",["answer","question"],true),
         databases.createStringAttribute(db,commentCollection,"typeId",50,true),

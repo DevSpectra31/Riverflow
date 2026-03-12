@@ -15,7 +15,7 @@ export default async function createQuestionCollection(){
         ])
     console.log("Question collection is created")
     //creating attributes
-    await Promise.all([
+      await Promise.all([
         databases.createStringAttribute(db,questionCollection,"title",100,true),
         databases.createStringAttribute(db,questionCollection,"content",10000,true),
         databases.createStringAttribute(db,questionCollection,"author",50,true),
